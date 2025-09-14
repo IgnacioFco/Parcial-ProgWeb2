@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionaria - CRUD de Autos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+     <!-- Libreria Axios para peticiones HTTP --> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+   
+
+    <header>
+        <h1>Concesionaria Online</h1>
+        <p>CRUD de autos usando MockAPI</p>
+    </header>
+
+    <main>
+        <!-- Formulario para crear / editar autos -->
+        <section id="form-section">
+            <h2>Agregar / Editar Auto</h2>
+            <form id="auto-form">
+                <input type="hidden" id="auto-id">
+
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+
+                <label for="anio">Año:</label>
+                <input type="number" id="anio" name="anio" required>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+
+                <button type="submit">Guardar</button>
+                <button type="reset" id="cancelar-edicion" class="hidden">Cancelar</button>
+            </form>
+        </section>
+
+        <section id="mensaje" class="hidden"></section>
+
+        <section id="lista-section">
+            <h2>Lista de Autos</h2>
+            <div id="autos-container" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - CRUD desarrollado en HTML, CSS y JS por Ignacio Mendoz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
